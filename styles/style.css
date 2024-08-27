@@ -1,0 +1,177 @@
+:root{
+    --color-primary: #0A3871;
+    --color-secondary: #D8DFE8;
+    --border: 0.3125rem solid #0A3871;
+    --font: "Montserrat Alternates", sans-serif;
+}
+
+*{
+    font-family: var(--font);
+}
+
+body{
+    background: #F3F5FC;
+}
+
+.header{
+    width: 90%;
+    margin: auto;
+}
+
+.header__logo{
+    margin-top: 2.5rem;
+}
+
+.main{
+    width: 80.5%;
+    margin: auto 2.5rem auto auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    min-height: calc(100vh - 5.6875rem - 4.4375rem);
+    align-items: end;
+}
+
+.left{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+textarea{
+    font-family: var(--font);
+}
+
+.insert__text{
+    width: 80%;
+    font-size: 2rem;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    resize: none;
+    outline: none;
+}
+.insert__text::placeholder{
+    color: var(--color-primary);
+}
+
+.left__message{
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+}
+
+.left__buttons{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.button_encrypt, .button_desencrypt, .copy__button{
+    max-width: 20.5rem;
+    width: 40%;
+    height: 4.1875rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    border: 0.0625rem solid var(--color-primary);
+    cursor: pointer;
+}
+
+.button_encrypt{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.button_desencrypt{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.right{
+    background-color: white;
+    height: calc(100% + 3rem);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 0px 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08);
+}
+
+.right.settings{
+    justify-content: space-between;
+}
+
+.right__image{
+    width: 100%;
+}
+
+.right__image.hide{
+    display: none;
+}
+
+.final__message{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.25rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.final__message.settings{
+    font-weight: lighter;
+    text-align: left;
+    height: 80%;
+}
+
+.right__message{
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.copy__button{
+    width: 100%;
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 75% auto;
+        width: auto;
+        margin: auto 2.5rem;
+    }
+    .left__buttons{
+        justify-content: center;
+    }
+    .button_encrypt, .button_desencrypt{
+        width: 45%;
+    }
+    .right{
+        height: 100%;
+    }
+    .right__image{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .main{
+        margin: auto 1rem;
+    }
+    .button_encrypt, .button_desencrypt{
+        max-width: 100%;
+        width: 100%;
+    }
+}

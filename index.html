@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de textos</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header>
+            <div class="header">
+                <img class="header__logo" src="./assets/Logo.png" alt="Logo de alura">    
+            </div>
+        </header>
+
+        <main>
+            <div class="main">
+                <div class="left">
+                    <textarea id="insertText" class="insert__text" placeholder="Ingrese el texto aquí"></textarea>
+                    
+                    <div class="left__footer">
+                        <img src="./assets/warning.png" alt="!">
+                        <span class="left__message">Solo letras minúsculas y sin acentos</span>
+
+                        <div class="left__buttons">
+                            <button id="buttonEncrypt" onclick="encryptButton();" class="button_encrypt">Encriptar</button>
+                            <button id="buttonDesencrypt" onclick="desencryptButton();" class="button_desencrypt">Desencriptar</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="right settings">
+                    <img id="rightImage" class="right__image" src="./assets/Muñeco.png" alt="">
+                    <textarea id="finalMessage" class="final__message" placeholder="Ningún mensaje fue encontrado"></textarea>
+                    <p id="rightMessage" class="right__message">Ingresa el texto que desees encriptar o desencriptar</p>
+                    <button id="copyButton" onclick="copyText();" class="copy__button hide">Copiar</button>
+                </div>
+            </div>
+
+            
+
+        </main>
+
+        <script src="app.js"></script>
+
+    </body>
+    </html>
